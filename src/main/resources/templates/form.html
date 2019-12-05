@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script type="text/javascript">
+        function getCode() {
+            var tel = $("#tel");
+            window.location.href="/code?telphone="+tel;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1 style="border: 3px">注册</h1><hr/><br/>
+        <form action="register" method="post">
+            <table border="5px">
+                <tr>
+                    <td>用户名:<input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>密码:<input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td>手机号:<input type="text" name="telphone" id="tel"></td>
+                </tr>
+                <tr>
+                    <td>邮箱:<input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>验证码:<input type="text" name="code"><a onclick="getCode()">获取验证码</a></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="提交"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
